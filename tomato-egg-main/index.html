@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tomato Experiment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="topbar">
+    <a class="brand" href="#top">T/E — 001</a>
+    <span class="nav-note">A VERY SMALL FOOD EXPERIMENT</span>
+    <a class="nav-link" href="#method">THE METHOD ↘</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-meta">
+        <span>FIELD NOTES NO. 01</span>
+        <span>2 INGREDIENTS / 1 PAN</span>
+      </div>
+      <div class="hero-title">
+        <p class="eyebrow">TODAY'S SUBJECT:</p>
+        <h1>TOMATO<br><span class="plus">+</span> EGG<span class="period">.</span></h1>
+      </div>
+      <div class="hero-art">
+        <img src="images/tomato.png" alt="Tomato illustration" class="hero-tomato">
+        <img src="images/egg.png" alt="Egg illustration" class="hero-egg">
+        <div class="art-sticker">EDIBLE<br>RESEARCH<br>★ 001</div>
+      </div>
+      <div class="hero-bottom">
+        <p>A little oil. A hot pan.<br>Two ingredients doing their thing.</p>
+        <a class="start-button" href="#ingredients">START THE EXPERIMENT ↓</a>
+      </div>
+      <span class="side-label">THE EVERYDAY KITCHEN ARCHIVE</span>
+    </section>
+
+    <section class="ingredients" id="ingredients">
+      <div class="section-heading">
+        <span class="number">01 / INVENTORY</span>
+        <h2>THE<br>SUBJECTS.</h2>
+        <p>Gather your materials before the experiment begins.</p>
+      </div>
+
+      <div class="ingredient-board">
+        <article class="ingredient tomato-item">
+          <span class="ingredient-number">A</span>
+          <img src="images/tomato.png" alt="Tomato">
+          <h3>THE TOMATO</h3>
+          <p>01 large tomato, chopped</p>
+          <span class="ingredient-note">ACID / JUICE / COLOUR</span>
+        </article>
+        <article class="ingredient egg-item">
+          <span class="ingredient-number">B</span>
+          <img src="images/egg.png" alt="Egg">
+          <h3>THE EGG</h3>
+          <p>02 eggs, ready to crack</p>
+          <span class="ingredient-note">PROTEIN / TEXTURE</span>
+        </article>
+        <article class="ingredient oil-item">
+          <span class="ingredient-number">C</span>
+          <img src="images/oil.png" alt="Cooking oil">
+          <h3>THE MEDIUM</h3>
+          <p>A splash of cooking oil</p>
+          <span class="ingredient-note">HEAT TRANSFER</span>
+        </article>
+        <article class="ingredient salt-item">
+          <span class="ingredient-number">D</span>
+          <img src="images/salt.png" alt="Salt">
+          <h3>THE VARIABLE</h3>
+          <p>Salt, to taste</p>
+          <span class="ingredient-note">SEASONING / BALANCE</span>
+        </article>
+      </div>
+      <p class="board-caption">FIG. 01 — ALL MATERIALS REQUIRED FOR A SUCCESSFUL RESULT.</p>
+    </section>
+
+    <section class="method" id="method">
+      <div class="method-intro">
+        <span class="number">02 / PROCEDURE</span>
+        <h2>LET'S SEE<br>WHAT HAPPENS.</h2>
+        <p>Follow the steps. Watch the ingredients change.</p>
+      </div>
+
+      <div class="progress-panel">
+        <div class="progress-top">
+          <span>EXPERIMENT PROGRESS</span>
+          <span id="progress-count">0 / 5</span>
+        </div>
+        <div class="progress-track">
+          <div id="progress-fill"></div>
+        </div>
+        <p id="progress-message">Ready when you are.</p>
+      </div>
+
+      <article class="step step-prepare" id="prepare" data-step="1">
+        <div class="step-copy">
+          <span class="step-tag">STEP 01 — PREPARATION</span>
+          <h3>Break it<br>down.</h3>
+          <p>Wash the tomato and cut it into small pieces. Get everything ready before the pan gets hot.</p>
+          <button class="done-button" data-complete="1">MARK AS DONE ↗</button>
+        </div>
+        <div class="step-art">
+          <img src="images/prepare-whole.png" alt="Whole tomato ready to prepare" class="prepare-whole">
+          <img src="images/prepare-cut.png" alt="Chopped tomato" class="prepare-cut">
+          <span class="art-caption">RAW MATERIAL → PREPARED MATERIAL</span>
+        </div>
+      </article>
+
+      <article class="step step-crack" id="crack" data-step="2">
+        <div class="step-copy">
+          <span class="step-tag">STEP 02 — COMBINATION</span>
+          <h3>Crack<br>the code.</h3>
+          <p>Crack the eggs into a bowl. Add a pinch of salt and whisk until the yolks and whites combine.</p>
+          <button class="done-button" data-complete="2">MARK AS DONE ↗</button>
+        </div>
+        <div class="step-art crack-art">
+          <img src="images/egg-cracked.png" alt="Cracked egg">
+          <span class="art-caption">SHELL OUT. EGG IN.</span>
+        </div>
+      </article>
+
+      <article class="step step-heat" id="heat" data-step="3">
+        <div class="step-copy">
+          <span class="step-tag">STEP 03 — TEMPERATURE</span>
+          <h3>Apply<br>the heat.</h3>
+          <p>Warm a little oil in a pan over medium heat. Add the chopped tomato and cook until it softens.</p>
+          <button class="done-button" data-complete="3">MARK AS DONE ↗</button>
+        </div>
+        <div class="step-art heat-art">
+          <img src="images/pan.png" alt="Cooking pan" class="pan-image">
+          <img src="images/fire.png" alt="Flame under the pan" class="fire-image">
+          <span class="temperature">MEDIUM HEAT<br>NOT A VOLCANO.</span>
+        </div>
+      </article>
+
+      <article class="step step-stir" id="stir" data-step="4">
+        <div class="step-copy">
+          <span class="step-tag">STEP 04 — REACTION</span>
+          <h3>Bring it<br>together.</h3>
+          <p>Pour in the eggs. Stir gently with the tomatoes until the eggs are cooked to your liking.</p>
+          <button class="done-button" data-complete="4">MARK AS DONE ↗</button>
+        </div>
+        <div class="step-art stir-art">
+          <img src="images/tomato-cut.png" alt="Cut tomato illustration" class="tomato-cut">
+          <img src="images/eggs-cooked.png" alt="Cooked eggs" class="eggs-cooked">
+          <span class="art-caption">MIX / STIR / REPEAT</span>
+        </div>
+      </article>
+
+      <article class="step step-finish" id="finish" data-step="5">
+        <div class="finish-copy">
+          <span class="step-tag">STEP 05 — RESULT</span>
+          <h3>Experiment<br>complete<span>!</span></h3>
+          <p>Tomato meets egg. Heat does its magic. Lunch is served.</p>
+          <button class="done-button" data-complete="5">FINISH THE EXPERIMENT ↗</button>
+        </div>
+        <div class="finish-art">
+          <img src="images/tomato-egg.png" alt="Finished tomato and egg dish">
+          <div class="result-stamp">RESULT:<br>DELICIOUS.</div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <span>T/E — 001</span>
+      <p>NOT ROCKET SCIENCE. JUST GOOD FOOD.</p>
+      <a href="#top">BACK TO THE TOP ↑</a>
+    </footer>
+  </main>
+</body>
+</html>

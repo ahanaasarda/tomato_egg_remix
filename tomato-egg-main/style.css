@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #171714;
+  --cream: #f3eddd;
+  --red: #f04a32;
+  --yellow: #f5c94f;
+  --line: rgba(243, 237, 221, .3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+button {
+  font: inherit;
+}
+
+.topbar {
+  min-height: 62px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--line);
+  font: 11px 'DM Mono', monospace;
+  letter-spacing: 1px;
+}
+
+.brand {
+  font-weight: 500;
+  color: var(--yellow);
+}
+
+.nav-link {
+  border-bottom: 1px solid var(--cream);
+  padding-bottom: 5px;
+}
+
+.nav-note {
+  opacity: .65;
+}
+
+.hero {
+  min-height: 760px;
+  padding: 25px 7% 40px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-meta,
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font: 11px 'DM Mono', monospace;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+  margin-top: 85px;
+}
+
+.eyebrow {
+  font: 10px 'DM Mono', monospace;
+  color: var(--yellow);
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  font-size: clamp(80px, 15vw, 205px);
+  letter-spacing: -.105em;
+  line-height: .76;
+  margin: 24px 0;
+  font-weight: 700;
+}
+
+h1 .plus {
+  color: var(--red);
+}
+
+.period {
+  color: var(--yellow);
+}
+
+.hero-art {
+  position: absolute;
+  width: 43%;
+  height: 420px;
+  right: 6%;
+  top: 205px;
+  pointer-events: none;
+}
+
+.hero-tomato {
+  position: absolute;
+  width: 67%;
+  right: 17%;
+  top: 0;
+  transform: rotate(-13deg);
+  animation: float 5s ease-in-out infinite;
+}
+
+.hero-egg {
+  position: absolute;
+  width: 32%;
+  right: 0;
+  bottom: 12px;
+  transform: rotate(14deg);
+  animation: float 4s ease-in-out infinite reverse;
+}
+
+.art-sticker {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  background: var(--yellow);
+  color: var(--black);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font: 11px/1.5 'DM Mono', monospace;
+  transform: rotate(-12deg);
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 35px;
+  left: 7%;
+  right: 7%;
+}
+
+.hero-bottom p {
+  font: 15px/1.5 'DM Mono', monospace;
+}
+
+.start-button {
+  padding: 16px 22px;
+  color: var(--black);
+  background: var(--yellow);
+  font: 11px 'DM Mono', monospace;
+  transition: .2s;
+}
+
+.start-button:hover {
+  background: var(--red);
+  color: var(--cream);
+}
+
+.side-label {
+  position: absolute;
+  right: 18px;
+  top: 48%;
+  writing-mode: vertical-rl;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 2px;
+  opacity: .6;
+}
+
+.ingredients {
+  padding: 110px 7%;
+  background: var(--cream);
+  color: var(--black);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.number {
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+}
+
+.section-heading .number {
+  align-self: start;
+  color: var(--red);
+}
+
+.section-heading h2,
+.method-intro h2 {
+  margin: 0;
+  font-size: clamp(55px, 9vw, 115px);
+  letter-spacing: -.09em;
+  line-height: .82;
+}
+
+.section-heading > p {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 190px;
+}
+
+.ingredient-board {
+  margin-top: 75px;
+  min-height: 460px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr 1fr .8fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.ingredient {
+  position: relative;
+  min-height: 320px;
+  padding: 22px 16px;
+  border-top: 2px solid var(--black);
+}
+
+.ingredient:nth-child(even) {
+  margin-top: 80px;
+}
+
+.ingredient-number {
+  font: 12px 'DM Mono', monospace;
+  color: var(--red);
+}
+
+.ingredient img {
+  height: 180px;
+  width: 100%;
+  margin: 15px auto;
+}
+
+.ingredient h3 {
+  font-size: 17px;
+  margin: 10px 0 5px;
+}
+
+.ingredient p {
+  font-size: 12px;
+}
+
+.ingredient-note {
+  display: block;
+  margin-top: 20px;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+}
+
+.tomato-item img {
+  transform: rotate(-12deg);
+}
+
+.egg-item img {
+  transform: rotate(9deg);
+}
+
+.oil-item img {
+  transform: rotate(-5deg);
+}
+
+.salt-item img {
+  transform: rotate(8deg);
+}
+
+.board-caption {
+  margin-top: 40px;
+  font: 10px 'DM Mono', monospace;
+  opacity: .6;
+}
+
+.method {
+  padding: 100px 7% 60px;
+}
+
+.method-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.method-intro .number {
+  color: var(--yellow);
+  align-self: start;
+}
+
+.method-intro h2 {
+  font-size: clamp(48px, 8vw, 100px);
+}
+
+.method-intro p {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 180px;
+}
+
+.progress-panel {
+  margin: 65px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+}
+
+.progress-track {
+  height: 5px;
+  background: #494941;
+  margin: 15px 0;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0;
+  background: var(--red);
+  transition: width .4s;
+}
+
+#progress-message {
+  font: 12px 'DM Mono', monospace;
+  color: var(--yellow);
+}
+
+.step {
+  min-height: 480px;
+  margin: 35px 0;
+  padding: 55px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  color: var(--black);
+  overflow: hidden;
+}
+
+.step-copy {
+  max-width: 410px;
+}
+
+.step-tag {
+  color: var(--red);
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+}
+
+.step h3 {
+  font-size: clamp(54px, 7vw, 90px);
+  line-height: .82;
+  letter-spacing: -.08em;
+  margin: 25px 0;
+}
+
+.step-copy p,
+.finish-copy p {
+  max-width: 320px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.done-button {
+  margin-top: 20px;
+  padding: 13px 17px;
+  border: 1px solid var(--black);
+  background: transparent;
+  cursor: pointer;
+  font: 10px 'DM Mono', monospace;
+  transition: .2s;
+}
+
+.done-button:hover,
+.done-button.completed {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.step-art {
+  position: relative;
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+}
+
+.step-art img {
+  max-height: 300px;
+  width: 80%;
+}
+
+.art-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+}
+
+.step-prepare {
+  background: var(--yellow);
+}
+
+.step-prepare .step-art img {
+  width: 68%;
+}
+
+.prepare-whole {
+  position: absolute;
+  transform: translate(-15%, -5%) rotate(-12deg);
+}
+
+.prepare-cut {
+  position: absolute;
+  transform: translate(25%, 20%) rotate(12deg);
+}
+
+.step-crack {
+  background: var(--cream);
+}
+
+.step-crack .step-art {
+  background: var(--red);
+  min-height: 350px;
+  transform: rotate(2deg);
+}
+
+.step-crack .step-art img {
+  width: 70%;
+}
+
+.crack-art .art-caption {
+  padding: 12px;
+  color: var(--cream);
+}
+
+.step-heat {
+  background: var(--red);
+  color: var(--cream);
+}
+
+.step-heat .step-tag {
+  color: var(--yellow);
+}
+
+.heat-art {
+  background: var(--black);
+  min-height: 350px;
+}
+
+.heat-art .pan-image {
+  position: absolute;
+  width: 90%;
+  bottom: 15%;
+}
+
+.heat-art .fire-image {
+  position: absolute;
+  width: 35%;
+  bottom: 0;
+}
+
+.temperature {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: var(--yellow);
+  font: 10px/1.8 'DM Mono', monospace;
+}
+
+.step-stir {
+  background: var(--yellow);
+}
+
+.stir-art {
+  background: var(--cream);
+  min-height: 350px;
+}
+
+.stir-art .tomato-cut {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 15%;
+  transform: rotate(-15deg);
+}
+
+.stir-art .eggs-cooked {
+  position: absolute;
+  width: 65%;
+  right: 0;
+  bottom: 8%;
+  transform: rotate(8deg);
+}
+
+.stir-art .art-caption {
+  background: var(--black);
+  color: var(--cream);
+  padding: 10px;
+}
+
+.step-finish {
+  background: var(--cream);
+  min-height: 570px;
+  grid-template-columns: .8fr 1.2fr;
+}
+
+.finish-copy h3 span {
+  color: var(--red);
+}
+
+.finish-art {
+  position: relative;
+}
+
+.finish-art img {
+  width: 100%;
+  max-height: 420px;
+}
+
+.result-stamp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: var(--red);
+  color: var(--cream);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font: 12px/1.5 'DM Mono', monospace;
+  transform: rotate(12deg);
+}
+
+.step.is-done {
+  outline: 4px solid var(--yellow);
+  outline-offset: -4px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 7%;
+  border-top: 1px solid var(--line);
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: .7px;
+}
+
+footer p {
+  text-align: center;
+}
+
+@keyframes float {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-note,
+  .side-label {
+    display: none;
+  }
+
+  .hero {
+    min-height: 740px;
+    padding-inline: 6%;
+  }
+
+  .hero-title {
+    margin-top: 70px;
+  }
+
+  h1 {
+    font-size: 19vw;
+  }
+
+  .hero-art {
+    width: 85%;
+    right: 5%;
+    top: 290px;
+    height: 310px;
+  }
+
+  .hero-bottom {
+    left: 6%;
+    right: 6%;
+    align-items: end;
+  }
+
+  .hero-bottom p {
+    font-size: 12px;
+  }
+
+  .start-button {
+    padding: 13px 10px;
+    font-size: 9px;
+  }
+
+  .section-heading,
+  .method-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2,
+  .method-intro h2 {
+    margin-top: 25px;
+  }
+
+  .ingredient-board {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .ingredient:nth-child(even) {
+    margin-top: 35px;
+  }
+
+  .ingredient img {
+    height: 140px;
+  }
+
+  .step,
+  .step-finish {
+    grid-template-columns: 1fr;
+    padding: 35px 7%;
+    gap: 25px;
+  }
+
+  .step-art {
+    min-height: 280px;
+  }
+
+  .step h3 {
+    font-size: 65px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+
+  footer p {
+    order: 3;
+    width: 100%;
+    text-align: left;
+  }
+}
